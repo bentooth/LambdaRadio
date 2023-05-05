@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:LambdaRadio.Controls"
              x:Class="LambdaRadio.Pages.HomePage" Title="λ">
-    <Grid BackgroundColor="SteelBlue">
+    <Grid BackgroundColor="Black">
         
 
         <controls:MiniPlayer x:Name="player" VerticalOptions="End">
