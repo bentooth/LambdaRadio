@@ -6,21 +6,22 @@ namespace LambdaRadio.ViewModels;
 public class BaseViewModel : INotifyPropertyChanged
 {
 
-    private bool _isLoading;
-    public bool IsLoading { get => _isLoading; set { _isLoading = value; OnPropertyChanged(); } }
+	private string _title;
+	public string Title { get => _title; set { _title = value; OnPropertyChanged(); } }
 
-    public INavigation Navigation { get; set; }
+	private bool _isLoading;
+	public bool IsLoading { get => _isLoading; set { _isLoading = value; OnPropertyChanged(); } }
 
-    public event PropertyChangedEventHandler PropertyChanged;
+	public INavigation Navigation { get; set; }
 
-    public void OnPropertyChanged([CallerMemberName] string propertyName = "")
-    {
-        var changed = PropertyChanged;
-        if (changed == null)
-            return;
+	public event PropertyChangedEventHandler PropertyChanged;
 
-        changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
-    }
+	public void OnPropertyChanged([CallerMemberName] string propertyName = "")
+	{
+		var changed = PropertyChanged;
+		if (changed == null)
+			return;
+
+		changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
+	}
 }
-
-
