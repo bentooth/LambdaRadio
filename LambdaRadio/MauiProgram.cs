@@ -25,6 +25,10 @@ public static class MauiProgram
 		builder.Services.AddTransient<SearchPage>();
 		builder.Services.AddTransient<FavoritesPage>();
 
+		builder.Services.AddTransient<HomeViewModel>();
+		builder.Services.AddTransient<SearchViewModel>();
+		builder.Services.AddTransient<FavoritesViewModel>();
+
 #if DEBUG
         builder.Logging.AddDebug();
 #endif

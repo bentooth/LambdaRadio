@@ -2,8 +2,13 @@
 
 public partial class HomePage : ContentPage
 {
-	public HomePage()
+	private readonly HomeViewModel _viewModel;
+
+	public HomePage(HomeViewModel viewModel)
 	{
 		InitializeComponent();
+		_viewModel = viewModel;
+		_viewModel.Navigation = Navigation;
+		BindingContext = _viewModel;
 	}
 }
