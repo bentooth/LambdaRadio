@@ -6,8 +6,8 @@
     xmlns:pages="clr-namespace:LambdaRadio.Pages"
     Shell.FlyoutBehavior="Disabled">
 
-
     <TabBar>
+
         <ShellContent
             Title="Home"
             ContentTemplate="{DataTemplate pages:HomePage}"  />
@@ -22,4 +22,3 @@
     </TabBar>
 
 </Shell>
-
