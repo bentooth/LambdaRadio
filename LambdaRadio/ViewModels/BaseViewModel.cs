@@ -1,0 +1,26 @@
+﻿using System.ComponentModel;
+using System.Runtime.CompilerServices;
+
+namespace LambdaRadio.ViewModels;
+
+public class BaseViewModel : INotifyPropertyChanged
+{
+
+    private bool _isLoading;
+    public bool IsLoading { get => _isLoading; set { _isLoading = value; OnPropertyChanged(); } }
+
+    public INavigation Navigation { get; set; }
+
+    public event PropertyChangedEventHandler PropertyChanged;
+
+    public void OnPropertyChanged([CallerMemberName] string propertyName = "")
+    {
+        var changed = PropertyChanged;
+        if (changed == null)
+            return;
+
+        changed.Invoke(this, new PropertyChangedEventArgs(propertyName));
+    }
+}
+
+

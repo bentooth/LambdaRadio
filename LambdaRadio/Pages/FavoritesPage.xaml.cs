@@ -1,4 +1,4 @@
-﻿namespace LambdaRadio.Views;
+﻿namespace LambdaRadio.Pages;
 
 public partial class FavoritesPage : ContentPage
 {

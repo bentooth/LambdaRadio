@@ -56,14 +56,25 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Views\HomePage.xaml">
+	  <MauiXaml Update="Pages\HomePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\FavortiesPage.xaml">
+	  <MauiXaml Update="Pages\FavortiesPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Views\SearchPage.xaml">
+	  <MauiXaml Update="Pages\SearchPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
+	</ItemGroup>
+	<ItemGroup>
+	  <None Remove="Resources\Images\lambda_logo.png" />
+	  <None Remove="ViewModels\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <BundleResource Include="Resources\Images\lambda_logo.png" />
+	  <BundleResource Include="Resources\Images\lambda_logo.png" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="ViewModels\" />
 	</ItemGroup>
 </Project>
