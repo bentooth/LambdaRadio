@@ -3,14 +3,15 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:controls="clr-namespace:LambdaRadio.Controls"
              x:Class="LambdaRadio.Pages.HomePage" Title="λ">
-    <Grid BackgroundColor="Black">
-        
 
-        <controls:MiniPlayer x:Name="player" VerticalOptions="End">
+    <ContentPage.Content>
+        <Grid RowDefinitions="auto,*">
 
+            <ScrollView Grid.Row="0">
+            </ScrollView>
 
-        </controls:MiniPlayer>
-    </Grid>
+            <controls:MiniPlayer x:Name="player" VerticalOptions="End" Grid.Row="1"/>
 
-    
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>

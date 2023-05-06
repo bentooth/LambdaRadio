@@ -66,15 +66,31 @@
 	  <None Remove="Resources\Fonts\Spotify-Bold.woff2" />
 	  <None Remove="Resources\Fonts\Spotify-Light.woff2" />
 	  <None Remove="Resources\Images\" />
+	  <None Remove="Resources\Images\play.png" />
+	  <None Remove="Resources\Images\ice_cover.jpg" />
+	  <None Remove="Resources\Images\favorite_filled.svg" />
+	  <None Remove="Resources\Images\favorite_outlined.svg" />
+	  <None Remove="Resources\Images\home_filled.svg" />
+	  <None Remove="Resources\Images\home_outlined.svg" />
+	  <None Remove="Resources\Images\search.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Fonts\Spotify-Bold.woff2" />
 	  <BundleResource Include="Resources\Fonts\Spotify-Light.woff2" />
+	  <BundleResource Include="Resources\Images\favorite_filled.svg" />
+	  <BundleResource Include="Resources\Images\favorite_outlined.svg" />
+	  <BundleResource Include="Resources\Images\home_filled.svg" />
+	  <BundleResource Include="Resources\Images\home_outlined.svg" />
+	  <BundleResource Include="Resources\Images\search.svg" />
 	</ItemGroup>
 	<ItemGroup>
 	  <Folder Include="ViewModels\" />
 	  <Folder Include="Models\" />
 	  <Folder Include="Controls\" />
 	  <Folder Include="Resources\Images\" />
+	</ItemGroup>
+	<ItemGroup>
+	  <MauiImage Include="Resources\Images\ice_cover.jpg" />
+	  <MauiImage Include="Resources\Images\play.png" />
 	</ItemGroup>
 </Project>
