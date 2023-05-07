@@ -95,4 +95,7 @@
 	  <MauiImage Include="Resources\Images\play.png" />
 	  <MauiImage Include="Resources\Images\pause.png" />
 	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\Downloads\dotnet-podcasts-main\src\Lib\SharedMauiLib\SharedMauiLib.csproj" />
+	</ItemGroup>
 </Project>
