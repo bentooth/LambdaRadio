@@ -28,7 +28,7 @@
 
 
                 <Grid Grid.Column="2" Padding="8">
-                    <Image x:Name="playpauseButton"
+                    <Image x:Name="playButton"
                         Source="play.png"
 						WidthRequest="20"
 						HeightRequest="20"

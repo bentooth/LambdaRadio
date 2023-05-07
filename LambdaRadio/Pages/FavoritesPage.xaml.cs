@@ -2,13 +2,23 @@
 
 public partial class FavoritesPage : ContentPage
 {
-	private readonly FavoritesViewModel _viewModel;
 
-	public FavoritesPage(FavoritesViewModel viewModel)
+	public FavoritesPage(FavoritesViewModel vm)
 	{
 		InitializeComponent();
-		_viewModel = viewModel;
-		_viewModel.Navigation = Navigation;
-		BindingContext = _viewModel;
+		BindingContext = vm;
 	}
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        player.OnAppearing();
+    }
+
+
+    protected override void OnDisappearing()
+    {
+        player.OnDisappearing();
+        base.OnDisappearing();
+    }
 }

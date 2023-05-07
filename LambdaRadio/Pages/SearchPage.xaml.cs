@@ -2,13 +2,22 @@
 
 public partial class SearchPage : ContentPage
 {
-	private readonly SearchViewModel _viewModel;
-
-	public SearchPage(SearchViewModel viewModel)
+	public SearchPage(SearchViewModel vm)
 	{
 		InitializeComponent();
-		_viewModel = viewModel;
-		_viewModel.Navigation = Navigation;
-		BindingContext = _viewModel;
+		BindingContext = vm;
 	}
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        player.OnAppearing();
+    }
+
+
+    protected override void OnDisappearing()
+    {
+        player.OnDisappearing();
+        base.OnDisappearing();
+    }
 }

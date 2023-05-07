@@ -49,17 +49,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <MauiXaml Update="Pages\HomePage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\FavortiesPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	  <MauiXaml Update="Pages\SearchPage.xaml">
-	    <Generator>MSBuild:Compile</Generator>
-	  </MauiXaml>
-	</ItemGroup>
-	<ItemGroup>
 	  <None Remove="ViewModels\" />
 	  <None Remove="Models\" />
 	  <None Remove="Controls\" />
@@ -74,6 +63,7 @@
 	  <None Remove="Resources\Images\home_outlined.svg" />
 	  <None Remove="Resources\Images\search.svg" />
 	  <None Remove="Resources\Images\pause.png" />
+	  <None Remove="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Fonts\Spotify-Bold.woff2" />
@@ -89,6 +79,7 @@
 	  <Folder Include="Models\" />
 	  <Folder Include="Controls\" />
 	  <Folder Include="Resources\Images\" />
+	  <Folder Include="Services\" />
 	</ItemGroup>
 	<ItemGroup>
 	  <MauiImage Include="Resources\Images\ice_cover.jpg" />
