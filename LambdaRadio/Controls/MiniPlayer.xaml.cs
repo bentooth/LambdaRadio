@@ -8,18 +8,19 @@ public partial class MiniPlayer : ContentView
         InitializeComponent();
     }
 
-    void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
+    private async void TapGestureRecognizer_Tapped(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
     {
-        Console.WriteLine("Show Player");
+        await Navigation.PushModalAsync(new FullPlayerPage());
     }
 
     void TapGestureRecognizer_Tapped_1(System.Object sender, Microsoft.Maui.Controls.TappedEventArgs e)
     {
-        Console.WriteLine("Play/Pause Music");
+        var imageSource = ImageSource.FromFile("pause.png");
+        playpauseButton.Source = imageSource;
     }
 
-    void SwipeGestureRecognizer_Swiped(System.Object sender, Microsoft.Maui.Controls.SwipedEventArgs e)
+    private async void SwipeGestureRecognizer_Swiped(System.Object sender, Microsoft.Maui.Controls.SwipedEventArgs e)
     {
-        Console.WriteLine("Show Player");
+        await Navigation.PushModalAsync(new FullPlayerPage());
     }
 }

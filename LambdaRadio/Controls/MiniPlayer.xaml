@@ -6,48 +6,49 @@
 			 HeightRequest="45"
 			 IsVisible="true">
 
-
     <ContentView.Content>
 
         <Frame CornerRadius="5">
-            <Frame.GestureRecognizers>
-                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
-                <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped" />
-            </Frame.GestureRecognizers>
+            <Grid ColumnDefinitions="auto,*,auto" HeightRequest="45" Margin="-8,0,0,0">
 
-            <FlexLayout BackgroundColor="White" AlignItems="Center" AlignContent="Center" JustifyContent="SpaceBetween">
+                <Image  x:Name="albumCover"
+                        Source="ice_cover.jpg"
+                        Grid.Column="0"
+						Margin="0,0,0,0"
+						WidthRequest="35"
+						HeightRequest="35"
+						HorizontalOptions="Start"                       
+						VerticalOptions="Center"/>
 
-                <HorizontalStackLayout>
-                    <Image  Source="ice_cover.jpg"
-							Margin="-12,0,0,0"
-							WidthRequest="35"
-							HeightRequest="35"
-							HorizontalOptions="Center"                   
-							VerticalOptions="Center"/>
 
-                    <VerticalStackLayout Margin="10,-14,0,0">
-                        <Label Text="Noosphering" FontFamily="SpotifyBold"/>
-                        <Label Text="Ice Choir" FontSize="12" TextColor="Gray" FontFamily="SpotifyLight"/>
-                    </VerticalStackLayout>
+                <VerticalStackLayout Padding="8,5,0,0" Grid.Column="1" VerticalOptions="CenterAndExpand" HeightRequest="45">
+                    <Label Text="Noosphering" FontFamily="SpotifyBold"/>
+                    <Label Text="Ice Choir" FontSize="12" TextColor="Gray" FontFamily="SpotifyLight"/>
+                </VerticalStackLayout>
 
-                </HorizontalStackLayout>
 
-                <Image	Source="play.png"
-						WidthRequest="25"
-						HeightRequest="25"
+                <Grid Grid.Column="2" Padding="8">
+                    <Image x:Name="playpauseButton"
+                        Source="play.png"
+						WidthRequest="20"
+						HeightRequest="20"
 						HorizontalOptions="Center"                   
 						VerticalOptions="Center">
-                    <Image.GestureRecognizers>
+                    </Image>
+
+                    <Grid.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1">
-
-
                         </TapGestureRecognizer>
+                    </Grid.GestureRecognizers>
+                </Grid>
 
-                    </Image.GestureRecognizers>
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" />
+                    <SwipeGestureRecognizer Direction="Up" Swiped="SwipeGestureRecognizer_Swiped" />
+                </Grid.GestureRecognizers>
 
-                </Image>
 
-            </FlexLayout>
+            </Grid>
         </Frame>
 
     </ContentView.Content>

@@ -73,6 +73,7 @@
 	  <None Remove="Resources\Images\home_filled.svg" />
 	  <None Remove="Resources\Images\home_outlined.svg" />
 	  <None Remove="Resources\Images\search.svg" />
+	  <None Remove="Resources\Images\pause.png" />
 	</ItemGroup>
 	<ItemGroup>
 	  <BundleResource Include="Resources\Fonts\Spotify-Bold.woff2" />
@@ -92,5 +93,6 @@
 	<ItemGroup>
 	  <MauiImage Include="Resources\Images\ice_cover.jpg" />
 	  <MauiImage Include="Resources\Images\play.png" />
+	  <MauiImage Include="Resources\Images\pause.png" />
 	</ItemGroup>
 </Project>
