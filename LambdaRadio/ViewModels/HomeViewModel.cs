@@ -1,8 +1,13 @@
 ﻿namespace LambdaRadio.ViewModels;
 
-public class HomeViewModel : BaseViewModel
+public partial class HomeViewModel : BaseViewModel
 {
-	public HomeViewModel()
+	PlayerService playerService;
+
+	public HomeViewModel(PlayerService ps)
 	{
+		Title = "Home";
+		this.playerService = ps;
 	}
+
 }

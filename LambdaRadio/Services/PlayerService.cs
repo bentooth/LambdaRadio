@@ -1,4 +1,5 @@
 ﻿using SharedMauiLib;
+
 namespace LambdaRadio.Services;
 
 public class PlayerService
@@ -7,14 +8,29 @@ public class PlayerService
 
     public bool IsPlaying { get; set; }
 
+    public event EventHandler IsPlayingChanged;
 
     public PlayerService(INativeAudioService audioService)
     {
         this.audioService = audioService;
-        IsPlaying = false;
+
+        this.audioService.IsPlayingChanged += (object sender, bool e) =>
+        {
+            IsPlaying = e;
+            IsPlayingChanged?.Invoke(this, EventArgs.Empty);
+        };
     }
 
-    public void PlayAsync()
+    public async Task PlayAsync()
+    {
+        await audioService.InitializeAsync("https://electrictooth.com/fm/stream/1433975767");
+
+        InternalPlayPauseAsync();
+
+        IsPlayingChanged?.Invoke(this, EventArgs.Empty);
+    }
+
+    private void InternalPlayPauseAsync()
     {
         IsPlaying = !IsPlaying;
     }

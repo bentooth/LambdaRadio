@@ -22,9 +22,9 @@ public static class MauiProgram
 			so that we can inject it into the View’s constructor. 
 		 */
 
-        builder.Services.AddSingleton<HomePage>();
-        builder.Services.AddSingleton<SearchPage>();
-        builder.Services.AddSingleton<FavoritesPage>();
+        builder.Services.AddTransient<HomePage>();
+        builder.Services.AddTransient<SearchPage>();
+        builder.Services.AddTransient<FavoritesPage>();
 
         builder.Services.AddTransient<HomeViewModel>();
         builder.Services.AddTransient<SearchViewModel>();
